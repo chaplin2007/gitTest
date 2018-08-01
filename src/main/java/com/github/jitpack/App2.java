@@ -25,7 +25,7 @@ public class App2
 public static void deleteAllFiles(String path){
 		
 		File file = new File(path);
-		//폴더내 파일을 배열로 가져온다.
+		
 		File[] tempFile = file.listFiles();
 
 		if(tempFile.length >0){
@@ -35,7 +35,7 @@ public static void deleteAllFiles(String path){
 				if(tempFile[i].isFile()){
 					tempFile[i].delete();
 				}else{
-					//재귀함수
+				
 					deleteAllFiles(tempFile[i].getPath());
 				}
 				tempFile[i].delete();
